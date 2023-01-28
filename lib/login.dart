@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'signin.dart';
 
 void main() => runApp(const MyApp());
 
@@ -88,6 +89,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     style: TextStyle(fontSize: 20),
                   ),
                   onPressed: () {
+                    Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=> SigninScreen()));
                     //signup screen
                   },
                 )
