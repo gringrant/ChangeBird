@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'signin.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const MyLogin());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyLogin extends StatelessWidget {
+  const MyLogin({Key? key}) : super(key: key);
 
-  static const String _title = 'Sample App';
+  static const String _title = 'Change Bird';
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +90,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                   onPressed: () {
                     Navigator.push(context,
-                    MaterialPageRoute(builder: (context)=> SigninScreen()));
+                    MaterialPageRoute(builder: (context)=> SignInScreen()));
                     //signup screen
                   },
                 )
