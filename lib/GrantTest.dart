@@ -49,20 +49,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  Chat myChat = Chat("John Doe");
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+  List<Chat> chats = [Chat("John Doe"), Chat("George 🤣"), Chat("My group")];
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +69,17 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: ListView(
+        child: ListView.builder(
+          padding: const EdgeInsets.all(8),
+          itemCount: chats.length,
+          itemBuilder: (BuildContext context, int index) {
+            return chats[index].getAsList(context);/*Container(
+              height: 50,
+              color: Colors.amber[colorCodes[index]],
+              child: Center(child: Text('Entry ${entries[index]}'))
+            );*/
+          })
+        /*ListView(
 
           padding: const EdgeInsets.all(8),
           children: <Widget>[
@@ -102,13 +100,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             myChat.getAsList()
           ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+        ),*/
+      )
     );
   }
 }
