@@ -5,7 +5,7 @@ class Message{
   String contents;
   User owner = User("John Doe");
 
-  Message(this.contents);
+  Message(this.contents, this.owner);
 
   Container getMessageBox(){
     return Container(

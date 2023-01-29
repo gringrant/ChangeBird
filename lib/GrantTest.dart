@@ -74,11 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(8),
           itemCount: chats.length,
           itemBuilder: (BuildContext context, int index) {
-            return chats[index].getAsList(context);/*Container(
-              height: 50,
-              color: Colors.amber[colorCodes[index]],
-              child: Center(child: Text('Entry ${entries[index]}'))
-            );*/
+            return chats[index].getAsList(context);
           })
       )
     );

@@ -20,6 +20,10 @@ class Chat{
     Navigator.push(context, MaterialPageRoute(builder: (context) => MsgPage(this)));
   }
 
+  void addMessage(Message message){
+    messages.add(message);
+  }
+
   Container getAsList(context){
     return Container(
       height: 50,

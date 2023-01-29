@@ -34,7 +34,8 @@ import './Message.dart';
 
 class MsgPage extends StatefulWidget {
   final Chat chat;
-  const MsgPage(this.chat, {super.key});
+  final User currentUser = User("Zoom Meeting");
+  MsgPage(this.chat, {super.key});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -50,7 +51,6 @@ class MsgPage extends StatefulWidget {
 }
 
 class _MsgPageState extends State<MsgPage> {
-  Message msg = Message('content');
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,13 @@ class _MsgPageState extends State<MsgPage> {
       body: SafeArea(
         child: Column(
           children: [
-            msg.getMessageBox(),
+            Flexible(child:
+            ListView.builder(
+                padding: const EdgeInsets.all(8),
+                itemCount: widget.chat.messages.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return widget.chat.messages[index].getMessageBox();
+                }),),
             Expanded(child: Container()),
             Container(
                 color: Colors.white,
@@ -72,7 +78,7 @@ class _MsgPageState extends State<MsgPage> {
                     ),
                     onSubmitted: (value) {
                       setState(() {
-                        msg.contents = value;
+                        widget.chat.addMessage(Message(value, widget.currentUser));
                       });
                     }
                 )
