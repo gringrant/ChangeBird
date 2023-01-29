@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Change_bird',
+      title: 'Circle_go',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Change Bird Home Page'),
+      home: const MyHomePage(title: 'Circle Go Home Page'),
     );
   }
 }
@@ -76,7 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
           itemBuilder: (BuildContext context, int index) {
             return chats[index].getAsList(context);
           })
-      )
+      ),
+      floatingActionButton: const FloatingActionButton(
+        onPressed: null,
+      child: Icon(Icons.add),
+      ),
     );
   }
 }
