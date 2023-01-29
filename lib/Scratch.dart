@@ -49,7 +49,9 @@ class _MsgPageState extends State<MsgPage> {
                     ),
                     onSubmitted: (value) {
                       setState(() {
-                        widget.chat.addMessage(Message(value, widget.currentUser));
+                        Message newMessage = Message(value, widget.currentUser);
+                        widget.chat.addMessage(newMessage);
+                        widget.chat.addMessage(newMessage.analyzeMessage());
                       });
                     }
                 )
