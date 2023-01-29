@@ -17,7 +17,10 @@ class Chat{
       height: 50,
       color: Colors.blue,
       child: ListTile(
-        title: Text(title),
+        title: Text(title,
+          style:const TextStyle(
+            color: Colors.white
+          ) ),
 
         onTap: (){
           openChatDescription(context);
