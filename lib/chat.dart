@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import './user.dart';
 import './chatDescriptionPage.dart';
+import './Message.dart';
 
 class Chat{
   String title;
   User owner = User("John Doe");
+  List<User> participants = [];
+  List<Message> messages = [];
 
   Chat(this.title);
 

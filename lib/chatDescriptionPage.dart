@@ -13,11 +13,11 @@ class ChatDescriptionPage extends StatelessWidget {
         title: Text(chat.title),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
+        child: Column(
+          children: <Widget>[
+            Text('Name: ${chat.title}'),
+            Text('Owner: ${chat.owner.name}')
+          ],
         ),
       ),
     );
