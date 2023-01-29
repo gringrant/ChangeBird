@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Circle Go Home Page'),
+      home: const MyHomePage(title: 'Circle Go'),
     );
   }
 }
@@ -51,7 +51,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  List<Chat> chats = [Chat("John Doe"), Chat("George 🤣"), Chat("My group")];
+  List<Chat> chats = [Chat("Suhas"), Chat("Grant 🤣"), Chat("Zoom")];
 
   @override
   Widget build(BuildContext context) {

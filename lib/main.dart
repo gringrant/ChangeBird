@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Circle Go Home Page'),
+      home: const MyHomePage(title: 'Circle Go'),
     );
   }
 }
