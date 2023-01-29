@@ -55,7 +55,7 @@ class _MsgPageState extends State<MsgPage> {
       appBar: AppBar(
         title: chats.getAsList(context),
       ),
-      backgroundColor: Colors.lightBlue,
+      backgroundColor: Colors.lightBlue[900],
       body: SafeArea(
         child: Column(
           children: [

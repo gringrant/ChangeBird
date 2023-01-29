@@ -14,6 +14,7 @@ class SignInScreen extends StatelessWidget{
     return MaterialApp(
       title: _title,
       home: Scaffold(
+        backgroundColor: Colors.lightBlue[900],
         appBar: AppBar(title: const Text(_title)),
         body: const MyStatefulWidget(),
       ),
@@ -43,7 +44,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: const Text(
                   'New Account',
                   style: TextStyle(
-                      color: Colors.blue,
+                      color: Colors.white,
                       fontWeight: FontWeight.w500,
                       fontSize: 30),
                 )),
