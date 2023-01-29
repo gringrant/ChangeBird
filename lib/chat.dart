@@ -4,7 +4,7 @@ import './chatDescriptionPage.dart';
 
 class Chat{
   String title;
-  User owner = User();
+  User owner = User("John Doe");
 
   Chat(this.title);
 
@@ -15,7 +15,7 @@ class Chat{
       child: ListTile(
         title: Text(title),
         onTap: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => const chatDescriptionPage()));
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const ChatDescriptionPage()));
         },
       ),
     );

@@ -1,3 +1,5 @@
 class User{
-  String name = "John";
+  String name;
+
+  User(this.name);
 }
