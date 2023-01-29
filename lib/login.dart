@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'signin.dart';
-import 'chat.dart';
 import 'GrantTest.dart';
-import 'user.dart';
+//import 'user.dart';
 
 void main() => runApp(const MyLogin());
 
@@ -82,14 +81,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: ElevatedButton(
                   child: const Text('Login'),
                   onPressed: () {
-                    var name= User(nameController.text);
-                    print(passwordController.text);
+                    //var name= User(nameController.text);
+                    //print(passwordController.text);
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context)=> const MyApp()));
                   },
                 )
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Text('Don\'t have account?'),
                 TextButton(
@@ -99,12 +99,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                   onPressed: () {
                     Navigator.push(context,
-                    MaterialPageRoute(builder: (context)=> SignInScreen()));
+                        MaterialPageRoute(builder: (context)=> const SignInScreen()));
                     //signup screen
                   },
                 )
               ],
-              mainAxisAlignment: MainAxisAlignment.center,
             ),
           ],
         ));

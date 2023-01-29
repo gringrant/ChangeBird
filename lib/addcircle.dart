@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'chat.dart';
 import 'GrantTest.dart';
-import 'user.dart';
+//import 'user.dart';
 
 class AddScreen extends StatelessWidget{
   const AddScreen({Key? key}) : super(key: key);
@@ -64,7 +63,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: ElevatedButton(
                   child: const Text('Make Circle'),
                   onPressed: () {
-                    var circle= User (nameController.text);
+                    //var circle= User (nameController.text);
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context)=> const MyApp()));
                   },

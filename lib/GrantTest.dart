@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import './chat.dart';
-import 'addcircle.dart';
+import './addcircle.dart';
+import './Message.dart';
+import './user.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,7 +53,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  List<Chat> chats = [Chat("Suhas"), Chat("Grant 🤣"), Chat("Zoom")];
+  List<Chat> chats = [Chat("Sparthahack 8 team"), Chat("Suhas"), Chat("Grant 🤣"), Chat("Zoom")];
+
+  _MyHomePageState() {
+    chats[0].addMessage(Message("There's a cool hackathon this weekend, you want in?", User("Grant")));
+    chats[0].addMessage(Message("I'm down! I want to learn something new.", User("Suhas")));
+    chats[0].addMessage(Message("I agree!!! Nice!", User("Zoom")));
+    chats[0].addMessage(Message("Lets go! Let's be a team!", User("Grant")));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,10 +90,10 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => AddScreen())
+              MaterialPageRoute(builder: (context) => const AddScreen())
           );
         },
-      child: Icon(Icons.add)
+      child: const Icon(Icons.add)
       ),
     );
   }
