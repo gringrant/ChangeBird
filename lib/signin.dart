@@ -1,4 +1,7 @@
+import 'package:change_bird/login.dart';
 import 'package:flutter/material.dart';
+import 'chat.dart';
+
 
 class SignInScreen extends StatelessWidget{
   const SignInScreen({Key? key}) : super(key: key);
@@ -69,10 +72,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 height: 50,
                 padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                 child: ElevatedButton(
-                  child: const Text('Login'),
+                  child: const Text('Make Account'),
                   onPressed: () {
                     print(nameController.text);
                     print(passwordController.text);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context)=> MyLogin()));
                   },
                 )
             ),
