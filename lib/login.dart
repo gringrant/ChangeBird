@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'signin.dart';
 import 'chat.dart';
+import 'user.dart';
 
 void main() => runApp(const MyLogin());
 
@@ -76,7 +77,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: ElevatedButton(
                   child: const Text('Login'),
                   onPressed: () {
-                    print(nameController.text);
+                    var name= User(nameController.text);
                     print(passwordController.text);
                   },
                 )
