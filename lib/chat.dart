@@ -15,9 +15,10 @@ class Chat{
   Container getAsList(context){
     return Container(
       height: 50,
-      color: Colors.amber[600],
+      color: Colors.blue,
       child: ListTile(
         title: Text(title),
+
         onTap: (){
           openChatDescription(context);
         },
