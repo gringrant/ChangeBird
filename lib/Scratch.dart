@@ -22,6 +22,7 @@ class MsgPage extends StatefulWidget {
 }
 
 class _MsgPageState extends State<MsgPage> {
+  var txt = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +45,7 @@ class _MsgPageState extends State<MsgPage> {
             Container(
                 color: Colors.white,
                 child: TextField(
+                  controller: txt,
                     decoration: const InputDecoration(
                         contentPadding: EdgeInsets.all(12),
                     ),
@@ -52,6 +54,7 @@ class _MsgPageState extends State<MsgPage> {
                         Message newMessage = Message(value, widget.currentUser);
                         widget.chat.addMessage(newMessage);
                         widget.chat.addMessage(newMessage.analyzeMessage());
+                        txt.text = "";
                       });
                     }
                 )
