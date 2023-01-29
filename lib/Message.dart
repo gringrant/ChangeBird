@@ -5,10 +5,12 @@ class Message{
   String contents;
   User owner = User("John Doe");
 
-  Message(this.contents, this.owner);
+  Message(this.contents);
 
   Container getMessageBox(){
-
-    return Container();
+    return Container(
+      color: Colors.blue,
+          child: Text(contents),
+    );
   }
 }

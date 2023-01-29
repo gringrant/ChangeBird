@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './chat.dart';
+import './user.dart';
+import './Message.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Change_bird',
+      title: 'BigBird',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -49,6 +51,11 @@ class MsgPage extends StatefulWidget {
 
 class _MsgPageState extends State<MsgPage> {
   Chat chats = Chat('Name');
+  Message msg = Message('content');
+  _MsgPageState(){
+    msg.owner = chats.owner;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,13 +66,19 @@ class _MsgPageState extends State<MsgPage> {
       body: SafeArea(
         child: Column(
           children: [
+            msg.getMessageBox(),
             Expanded(child: Container()),
             Container(
                 color: Colors.white,
-                child: const TextField(
-                    decoration: InputDecoration(
+                child: TextField(
+                    decoration: const InputDecoration(
                         contentPadding: EdgeInsets.all(12),
-                    )
+                    ),
+                    onSubmitted: (value) {
+                      setState(() {
+                        msg.contents = value;
+                      });
+                    }
                 )
             )
               ]
