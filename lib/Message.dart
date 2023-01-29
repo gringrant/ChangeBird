@@ -17,7 +17,8 @@ class Message{
           borderRadius: BorderRadius.circular(12),
       ),
       padding: const EdgeInsets.all(10),
-          child: Text(contents),
+          child: Text(contents,
+            textAlign: TextAlign.right),
     );
   }
 }
