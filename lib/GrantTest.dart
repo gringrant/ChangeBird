@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './chat.dart';
+import 'addcircle.dart';
 
 void main() {
   runApp(const MyApp());
@@ -77,9 +78,13 @@ class _MyHomePageState extends State<MyHomePage> {
             return chats[index].getAsList(context);
           })
       ),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: null,
-      child: Icon(Icons.add),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => AddScreen())
+          );
+        },
+      child: Icon(Icons.add)
       ),
     );
   }
