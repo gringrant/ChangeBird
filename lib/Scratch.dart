@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './chat.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,15 +23,16 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
-      home: const MyHomePage(title: 'Change Bird Home Page'),
+      home: const MsgPage(title: 'Change Bird Home Page'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class MsgPage extends StatefulWidget {
+  final String title;
+  const MsgPage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -41,46 +43,34 @@ class MyHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
-
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MsgPage> createState() => _MsgPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+class _MsgPageState extends State<MsgPage> {
+  Chat chats = Chat('Name');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Messaging Page'),
+        title: chats.getAsList(context),
       ),
-      body: Center(
+      backgroundColor: Colors.lightBlue,
+      body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-    );
+          children: [
+            Expanded(child: Container()),
+            Container(
+                color: Colors.white,
+                child: const TextField(
+                    decoration: InputDecoration(
+                        contentPadding: EdgeInsets.all(12),
+                    )
+                )
+            )
+              ]
+        )
+      ));
   }
 }
+
