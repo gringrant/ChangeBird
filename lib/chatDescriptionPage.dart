@@ -28,8 +28,14 @@ class ChatDescriptionPage extends StatelessWidget {
                 height: 3,
               )
             ),
-          ],
-        ),
-      );
-  }
+            const Text('Hangouts: Meijer',
+              style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 25.0,
+              height: 3,
+            ),
+        )
+              ]
+      ));
+    }
 }
