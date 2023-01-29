@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './user.dart';
+import './ActivitiesList.dart';
 
 class Message{
   String contents;
@@ -29,7 +30,14 @@ class Message{
     );
   }
 
-  bool analyzeMessage(){
-    return true;
+  Message? analyzeMessage(){
+    List<String> words = contents.split(' ');
+    for(int i = 0; i < words.length; i++) {
+      if (map.containsKey(words[i])) {
+        return map[words[i]];
+      }
+    }
+
+    return null;
   }
 }
