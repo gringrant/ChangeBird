@@ -81,10 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) => AddScreen())
+              MaterialPageRoute(builder: (context) => const AddScreen())
           );
         },
-      child: Icon(Icons.add)
+      child: const Icon(Icons.add)
       ),
     );
   }
