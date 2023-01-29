@@ -51,6 +51,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   List<Chat> chats = [Chat("John Doe"), Chat("George 🤣"), Chat("My group")];
+  Chat myvarible = Chat("John Doe");
 
   @override
   Widget build(BuildContext context) {

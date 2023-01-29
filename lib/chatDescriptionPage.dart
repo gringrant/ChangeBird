@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-class chatDescriptionPage extends StatelessWidget {
-  const chatDescriptionPage({super.key});
+import './chat.dart';
+
+class ChatDescriptionPage extends StatelessWidget {
+
+  final Chat chat;
+  const ChatDescriptionPage(this.chat, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Description'),
+        title: Text(chat.title),
       ),
       body: Center(
         child: ElevatedButton(

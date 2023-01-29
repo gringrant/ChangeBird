@@ -8,6 +8,10 @@ class Chat{
 
   Chat(this.title);
 
+  void openChatDescription(context){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ChatDescriptionPage(this)));
+  }
+
   Container getAsList(context){
     return Container(
       height: 50,
@@ -15,7 +19,7 @@ class Chat{
       child: ListTile(
         title: Text(title),
         onTap: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => const ChatDescriptionPage()));
+          openChatDescription(context);
         },
       ),
     );
