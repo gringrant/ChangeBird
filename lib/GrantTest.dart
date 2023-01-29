@@ -51,7 +51,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   List<Chat> chats = [Chat("John Doe"), Chat("George 🤣"), Chat("My group")];
-  Chat myvarible = Chat("John Doe");
 
   @override
   Widget build(BuildContext context) {
@@ -81,28 +80,6 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Center(child: Text('Entry ${entries[index]}'))
             );*/
           })
-        /*ListView(
-
-          padding: const EdgeInsets.all(8),
-          children: <Widget>[
-            Container(
-              height: 50,
-              color: Colors.amber[600],
-              child: const Center(child: Text('Entry A')),
-            ),
-            Container(
-              height: 50,
-              color: Colors.amber[500],
-              child: const Center(child: Text('Entry B')),
-            ),
-            Container(
-              height: 50,
-              color: Colors.amber[100],
-              child: const Center(child: Text('Entry C')),
-            ),
-            myChat.getAsList()
-          ],
-        ),*/
       )
     );
   }
