@@ -18,7 +18,7 @@ class Message{
       ),
       padding: const EdgeInsets.all(10),
           child: Text(contents,
-            textAlign: TextAlign.right),
+            textAlign: TextAlign.right),//TextAlign.left for guest
     );
   }
 }
