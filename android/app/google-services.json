@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "688562051144",
+    "project_id": "guhazoom-98b8b",
+    "storage_bucket": "guhazoom-98b8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688562051144:android:b5a40929980d4fd7c1e07d",
+        "android_client_info": {
+          "package_name": "com.CircleGo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688562051144-ke8iv23fp24ofhtjq64k6tlpmigcojfd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsTqA3TwdexizzX9JWAfthG0OclDyPpcs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688562051144-ke8iv23fp24ofhtjq64k6tlpmigcojfd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
