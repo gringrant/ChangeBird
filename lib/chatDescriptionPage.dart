@@ -12,14 +12,24 @@ class ChatDescriptionPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(chat.title),
       ),
-      body: Center(
-        child: Column(
+      body: Column(
           children: <Widget>[
-            Text('Name: ${chat.title}'),
-            Text('Owner: ${chat.owner.name}')
+            Text('Name: ${chat.title}',
+                style:const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25.0,
+                    height: 2,
+                )
+            ),
+            Text('Owner: ${chat.owner.name}',
+              style:const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25.0,
+                height: 3,
+              )
+            ),
           ],
         ),
-      ),
-    );
+      );
   }
 }
