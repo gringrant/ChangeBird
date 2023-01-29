@@ -5,7 +5,7 @@ import './Message.dart';
 
 class MsgPage extends StatefulWidget {
   final Chat chat;
-  final User currentUser = User("Zoom Meeting");
+  final User currentUser = User("Grant");
   MsgPage(this.chat, {super.key});
 
   // This widget is the home page of your application. It is stateful, meaning
