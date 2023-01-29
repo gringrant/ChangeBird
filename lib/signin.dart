@@ -49,6 +49,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                       fontSize: 30),
                 )),
             Container(
+              color: Colors.white,
               padding: const EdgeInsets.all(10),
               child: TextField(
                 controller: nameController,
@@ -59,6 +60,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ),
             ),
             Container(
+              color: Colors.white,
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: TextField(
                 obscureText: true,
@@ -71,8 +73,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ),
 
             Container(
+                color: Colors.white,
                 height: 50,
-                padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+                padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
                 child: ElevatedButton(
                   child: const Text('Make Account'),
                   onPressed: () {
