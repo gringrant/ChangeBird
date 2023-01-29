@@ -3,11 +3,11 @@ import './chat.dart';
 import './user.dart';
 import './Message.dart';
 
-void main() {
+/*void main() {
   runApp(const MyApp());
-}
+}*/
 
-class MyApp extends StatelessWidget {
+/*class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -30,11 +30,11 @@ class MyApp extends StatelessWidget {
       home: const MsgPage(title: 'Change Bird Home Page'),
     );
   }
-}
+}*/
 
 class MsgPage extends StatefulWidget {
-  final String title;
-  const MsgPage({super.key, required this.title});
+  final Chat chat;
+  const MsgPage(this.chat, {super.key});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -50,17 +50,13 @@ class MsgPage extends StatefulWidget {
 }
 
 class _MsgPageState extends State<MsgPage> {
-  Chat chats = Chat('Name');
   Message msg = Message('content');
-  _MsgPageState(){
-    msg.owner = chats.owner;
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: chats.getAsList(context),
+        title: widget.chat.getAsTitleBar(context),
       ),
       backgroundColor: Colors.lightBlue[900],
       body: SafeArea(
