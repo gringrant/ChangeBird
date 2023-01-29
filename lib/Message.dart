@@ -9,7 +9,14 @@ class Message{
 
   Container getMessageBox(){
     return Container(
-      color: Colors.blue,
+      decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(
+            width: 2
+          ),
+          borderRadius: BorderRadius.circular(12),
+      ),
+      padding: const EdgeInsets.all(10),
           child: Text(contents),
     );
   }
