@@ -21,4 +21,8 @@ class Message{
             textAlign: TextAlign.right),//TextAlign.left for guest
     );
   }
+
+  bool analyzeMessage(){
+    return true;
+  }
 }
