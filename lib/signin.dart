@@ -7,7 +7,7 @@ import 'user.dart';
 class SignInScreen extends StatelessWidget{
   const SignInScreen({Key? key}) : super(key: key);
 
-  static const String _title = 'Change Bird';
+  static const String _title = 'Circle Go';
 
   @override
   Widget build(BuildContext context) {

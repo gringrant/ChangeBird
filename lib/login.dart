@@ -8,7 +8,7 @@ void main() => runApp(const MyLogin());
 class MyLogin extends StatelessWidget {
   const MyLogin({Key? key}) : super(key: key);
 
-  static const String _title = 'Change Bird';
+  static const String _title = 'Circle Go';
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Change Bird',
+                  'Circle Go',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w500,
