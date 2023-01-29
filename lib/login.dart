@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'signin.dart';
 import 'chat.dart';
+import 'GrantTest.dart';
 import 'user.dart';
 
 void main() => runApp(const MyLogin());
@@ -83,6 +84,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   onPressed: () {
                     var name= User(nameController.text);
                     print(passwordController.text);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context)=> const MyApp()));
                   },
                 )
             ),
