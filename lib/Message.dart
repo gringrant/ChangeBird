@@ -17,8 +17,15 @@ class Message{
           borderRadius: BorderRadius.circular(12),
       ),
       padding: const EdgeInsets.all(10),
-          child: Text(contents,
-            textAlign: TextAlign.right),//TextAlign.left for guest
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget> [
+              Text(owner.name,
+                  textAlign: TextAlign.right),
+              Text(contents,
+                  textAlign: TextAlign.right),
+            ]
+          ) //TextAlign.left for guest
     );
   }
 
